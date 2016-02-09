@@ -1,0 +1,8 @@
+<h1><%= @song.name %></h1>
+
+<p><%= @song.artist %></p> <!--@song.artist.name werkt niet, iets anders proberen-->
+<% if @song.good_for_mood then %>
+  <p> "mood booster :)" </p>
+<% else %>
+  <p> "mood looser :(" </p>
+<% end %>

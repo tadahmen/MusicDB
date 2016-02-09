@@ -1,0 +1,12 @@
+<h1>Available Songs</h1>
+
+<% @songs.each do |song| %>
+  <article class="song">
+    <h2><%= link_to song.name, song %></h2>
+    <% if song.good_for_mood then %>
+      <p> "mood booster :)" </p>
+    <% else %>
+      <p> "mood looser :(" </p>
+    <% end %>
+  </article>
+<% end %>
