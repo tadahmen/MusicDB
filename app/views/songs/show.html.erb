@@ -1,6 +1,6 @@
 <h1><%= @song.name %></h1>
 
-<p><%= @song.artist %></p> <!--@song.artist.name werkt niet, iets anders proberen-->
+<h2><%= link_to @song.artist.name, @song.artist %></h2>
 <% if @song.good_for_mood then %>
   <p> "mood booster :)" </p>
 <% else %>

@@ -1,3 +1,7 @@
 <h1>Available Artists</h1>
 
-<%= render @artists %>
+<% @artists.each do |artist| %>
+  <article class="artist">
+    <h2><%= link_to artist.name, artist %></h2>
+  </article>
+<% end %>
