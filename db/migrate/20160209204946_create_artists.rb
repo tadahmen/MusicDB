@@ -3,6 +3,7 @@ class CreateArtists < ActiveRecord::Migration
     create_table :artists do |t|
       t.string :name
       t.string :voice
+      t.string :picture
 
       t.timestamps null: false
     end

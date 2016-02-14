@@ -1,0 +1,32 @@
+<h1> Enter new song </h1>
+
+<section>
+  <%= form_for (@song) do |s| %>
+    <div class="form-group">
+      <%= s.label :name, "title" %> <!-- here the label is the TEXT "title" -->
+      <%= s.text_field :name %>
+    </div>
+
+    <div class="form-group">
+      <%= s.label :artist_id %> <!-- if you don't add a text for the label, the KEYNAME will be taken as a label -->
+      <%= s.select :artist_id, Artist.all.collect {|a| [a.name, a.id]} %>
+    </div>
+
+    <div class="form-group">
+      <p> "Is this song good for your mood?" </p>
+      <div>
+        <%= s.label :good_for_mood, "yes" %>
+        <%= s.radio_button :good_for_mood, true, :checked => true , :value => true %></div>
+
+      <br>
+      <div>
+        <%= s.label :good_for_mood, "no"%>
+        <%= s.radio_button :good_for_mood, false, :value => false%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= s.submit "Save Song", class: 'btn btn-lg btn-success' %> <!--evt nog mssg tonen "adding new song succeeded"-->
+    </div>
+  <% end %>
+</section

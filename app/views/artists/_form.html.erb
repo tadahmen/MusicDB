@@ -1,0 +1,25 @@
+<%= form_for(@artist) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :voice %>
+    <%= f.text_field :voice, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :picture %>
+    <%= f.file_field :picture, class: 'file-control' %><!--hier evt nog dingen ander-->
+  </div>
+  <!--   uploader = UploadPictureUploader.new
+     uploader.store!(my_file)
+    uploader.retrieve_from_store!('my_file.png')
+-->
+
+
+  <div class="form-group">
+    <%= f.submit "Save Artist", class: 'btn btn-lg btn-success' %> <!--evt nog mssg tonen "adding new artist succeeded"-->
+  </div>
+<%end%>

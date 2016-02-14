@@ -1,5 +1,5 @@
 Artist.destroy_all
-otis = Artist.create({ name: "Otis Redding", voice:"soulful"})
+otis = Artist.create({ name: "Otis Redding", voice:"soulful", picture: "app/assets/images/Otis-Redding-010.jpg"})
 celine = Artist.create({ name: "Celine Dion", voice:"aweful"})
 
 Song.destroy_all

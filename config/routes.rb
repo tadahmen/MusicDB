@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'songs#index'
   resources :songs
   resources :artists
+  delete 'artists/:id' => 'artists#destroy', as: :destroy_artist
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
